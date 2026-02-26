@@ -1,0 +1,10 @@
+lists.gluster.org {
+	root /var/www/lists.gluster.org/
+	file_server
+}
+
+download.gluster.org { 
+	root /var/www/download.gluster.org/
+	file_server
+}
+ 
