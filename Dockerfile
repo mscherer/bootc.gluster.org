@@ -17,7 +17,7 @@ dnf install -y --setopt=install_weak_deps=false caddy
 dnf install -y --setopt=install_weak_deps=false openssh-server systemd-networkd-defaults
 
 dnf clean all
-rm -Rf /var/log/dnf5.log /var/lib/dnf/ /var/cache/
+rm -Rf /var/log/dnf5.log /var/lib/dnf/ /var/cache/ /run/dnf
 EORUN
 
 # disable the flood of message on the console
