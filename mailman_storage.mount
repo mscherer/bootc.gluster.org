@@ -1,7 +1,7 @@
 [Unit]
 Conflicts=umount.target
 Before=local-fs.target umount.target
-After=swap.target
+After=var.mount
 
 [Mount]
 What=/dev/nvme2n1
