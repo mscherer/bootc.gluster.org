@@ -1,8 +1,11 @@
 [Unit]
 Conflicts=umount.target
-Before=local-fs.target umount.target
+Before=local-fs.target umount.target caddy.service
 After=var.mount
 
 [Mount]
 What=/dev/nvme1n1
 Where=/var/www/download.gluster.org/
+
+[Install]
+WantedBy=local-fs.target
