@@ -5,3 +5,6 @@ enable systemd-networkd.service
 enable sshd.service
 enable bootc-fetch-apply-updates.timer
 enable set_hostname.service
+
+enable var-www-lists.gluster.org.mount
+enable var-www-download.gluster.org.mount
