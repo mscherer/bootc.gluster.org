@@ -28,8 +28,8 @@ COPY disable-flood.conf /usr/lib/sysctl.d/60-disable-flood.conf
 # also used to copy the config in /etc/
 COPY caddy.tmpfile.conf /usr/lib/tmpfiles.d/caddy.conf
 COPY site.caddyfile /usr/lib/site.caddyfile
-COPY download_storage.mount /usr/lib/systemd/system/download_storage.mount
-COPY mailman_storage.mount /usr/lib/systemd/system/mailman_storage.mount
+COPY download_storage.mount /usr/lib/systemd/system/var-www-download.gluster.org.mount
+COPY mailman_storage.mount /usr/lib/systemd/system/var-www-lists.gluster.org.mount
 
 COPY motd.conf /usr/lib/motd.d/
 
