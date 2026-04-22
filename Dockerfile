@@ -39,7 +39,7 @@ COPY set_hostname/set_hostname.service /usr/lib/systemd/system/set_hostname.serv
 COPY set_hostname/set_hostname.sh      /usr/local/bin/set_hostname.sh
 
 RUN <<EORUN2
-systemctl preset
+systemctl preset-all
 EORUN2
 
 RUN bootc container lint --fatal-warnings
