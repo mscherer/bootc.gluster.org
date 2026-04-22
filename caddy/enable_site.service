@@ -1,0 +1,9 @@
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Before=caddy.service
+ExecStart=/usr/bin/cp -f /usr/lib/site.caddyfile /etc/caddy/Caddyfile.d/
+
+[Install]
+WantedBy=multi-user.target
+

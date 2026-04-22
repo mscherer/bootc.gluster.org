@@ -26,8 +26,10 @@ COPY disable-flood.conf /usr/lib/sysctl.d/60-disable-flood.conf
 # needed as bootc container lint complain about it. Some work should be done
 # to get if fixed upstream
 # also used to copy the config in /etc/
-COPY caddy.tmpfile.conf /usr/lib/tmpfiles.d/caddy.conf
-COPY site.caddyfile /usr/lib/site.caddyfile
+COPY caddy/caddy.tmpfile.conf /usr/lib/tmpfiles.d/caddy.conf
+COPY caddy/site.caddyfile /usr/lib/site.caddyfile
+COPY caddy/enable_site.service /usr/lib/systemd/system/enable_site.service
+
 COPY download_storage.mount /usr/lib/systemd/system/var-www-download.gluster.org.mount
 COPY mailman_storage.mount /usr/lib/systemd/system/var-www-lists.gluster.org.mount
 
