@@ -1,6 +1,10 @@
 lists.gluster.org {
-	root /var/www/lists.gluster.org/
-	file_server
+	root /var/www/lists.gluster.org/html/
+	file_server {
+	      browse {
+                        reveal_symlinks
+	      }
+	}
 }
 
 download.gluster.org { 
